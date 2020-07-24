@@ -6,16 +6,7 @@
 	<!--  App Description  -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" integrity="sha384-Tfj13fqQQqqzQFuaZ81WDzmmOU610WeS08VMuHmElK5oI2f7NwojuL6VupYXR/jK" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/owl.transitions.css"/>
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
-	<link rel="stylesheet" type="text/css" href="css/main.css"/>
-
-
-	<!-- <script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/ajaxchimp.js"></script> -->
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
@@ -48,11 +39,6 @@
 	</header>
 	<!--  End Header Section  -->
 
-
-
-
-
-
 	<!--  Hero Section  -->
 	<section class="hero" id="hero">
 		<div class="container">
@@ -74,10 +60,30 @@
 	</section>
 	<!--  End Hero Section  -->
 
+<script>
+	{
+		const head = document.getElementsByTagName('head')[0];
+		async function loadStyles(url){
+			const styles = document.createElement('link');
+			styles.href = url;
+			styles.type = "text/css";
+			styles.rel = "stylesheet";
+			console.log(styles);
+			head.appendChild(styles)
+		}
 
+		const styles = [
+			"css/bootstrap.css",
+			"css/owl.transitions.css",
+			"css/owl.carousel.css",
+			"css/animate.css",
+		]
+		window.onload = () => {
+			styles.map(loadStyles);
+		}
+	}
 
-
-
+</script>
 
 	<!--  Featured On Section  -->
 	<section class="featured_on">
@@ -99,19 +105,13 @@
 		</div>
 	</section>
 	<!--  End Featured On Section  -->
-
-
-
-
-
-
 	<!--  About Section  -->
 	<section class="about" id="about">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center animated wow fadeInLeft">
 					<div class="iphone">
-						<img src="img/iphone.jpg" alt="" titl="">
+						<img src="img/iphone.webp" alt="" titl="">
 					</div>
 				</div>
 				<div class="col-md-6 animated wow fadeInRight">
@@ -151,11 +151,6 @@
 		</div>
 	</section>
 	<!--  End About Section  -->
-
-
-
-
-
 
 	<!--  App Features Section  -->
 	<section class="app_features" id="app_features">
@@ -199,12 +194,6 @@
 		</div>
 	</section>
 	<!--  And App Features Section  -->
-
-
-
-
-
-
 	<!--  Testimonials Section  -->
 	<section class="testimonials animated wow fadeIn" id="testimonials" data-wow-duration="2s">
 		<div class="container">
@@ -246,12 +235,6 @@
 		</div>
 	</section>
 	<!--  End Testimonials Section  -->
-
-
-
-
-
-
 	<!--  Email Subscription Section  -->
 	<section class="sub_box">
 		<p class="cta_text animated wow fadeInDown">We're hiring. Join Our company!</p>
@@ -265,12 +248,6 @@
 		<div class="message" id="success_msg">Thank You For Your Subscription.</div>
 	</section>
 	<!--  End Email Subscription Section  -->
-
-
-
-
-
-	
 	<!--  Footer Section  -->
 	<footer>
 		<ul class="list-unstyled list-inline app_platform">
@@ -288,11 +265,20 @@
 	</footer>
 	<!--  End Footer Section  -->
 	
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/ajaxchimp.js"></script>
+	<script type="text/javascript" src="js/nicescroll.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/wow.js"></script>
 	<script type="text/javascript" src="js/parallax.js"></script>
-	<script type="text/javascript" src="js/nicescroll.js"></script>
+	
 	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/scrollTo.js"></script>
+	<!-- <script type="text/javascript" src="js/scrollTo.js"></script> -->
+
+	
+
 </body>
 </html>
